@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ViewsComponent } from './views.component';
+import { NavbarComponent } from './shared-components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [ViewsComponent],
+  declarations: [NavbarComponent],
   imports: [
     CommonModule
   ]
