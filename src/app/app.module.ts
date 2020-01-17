@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CoreModule } from '@core/core.module';
-import { SidebarComponent } from '@views/shared-components/sidebar/sidebar.component';
-import { NavbarComponent } from '@views/shared-components/navbar/navbar.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {CoreModule} from '@core/core.module';
+import {SidebarComponent} from '@views/shared-components/sidebar/sidebar.component';
+import {NavbarComponent} from '@views/shared-components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,4 +19,5 @@ import { NavbarComponent } from '@views/shared-components/navbar/navbar.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

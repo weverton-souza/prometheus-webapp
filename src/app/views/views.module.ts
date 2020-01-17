@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './shared-components/navbar/navbar.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NavbarComponent} from './shared-components/navbar/navbar.component';
 
 @NgModule({
   declarations: [NavbarComponent],
@@ -8,4 +8,5 @@ import { NavbarComponent } from './shared-components/navbar/navbar.component';
     CommonModule
   ]
 })
-export class ViewsModule { }
+export class ViewsModule {
+}
