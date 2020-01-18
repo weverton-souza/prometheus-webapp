@@ -8,8 +8,7 @@ export const ClassFactory = <T>(className: string, action: string, payloadType: 
     static actionType: string = type(`@caltech/${className.toLocaleLowerCase()}${action}`);
     readonly type = obj[nameClass].actionType;
 
-    constructor(public payload: T) {
-    }
+    constructor(public payload: T) { }
   };
   return obj[nameClass];
 };
