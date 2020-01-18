@@ -1,0 +1,32 @@
+$font-sizes: 60 48 40 30 24 18 16 14 12;
+$selectors-headings-sizes: "h1-60px", "h2-48px", "h3-40px", "h4-30px", "h5-24px", "h6-18px", "h7-16px", "h8-14px", "h9-12px";
+$font-style: "bold", "light", "regular", "extra-bold", "semi-bold", "extra-light";
+$font-width: 58 66 101 125 129 133;
+$line-height: 72 61 58 44 38 29 16 14 12;
+$font-family: Montserrat;
+
+@each $selector in $selectors-headings-sizes {
+    $i: index($selectors-headings-sizes, $selector);
+    .caltech_heading-#{nth($selectors-headings-sizes, $i)} {
+        font-weight: bold;
+        line-height: nth($line-height, $i);
+        letter-spacing: nth($font-sizes, $i);
+    }
+}
+
+@each $font in $font-style {
+    $i: index($font-style, $font);
+    .caltech_font-#{nth($font-style, $i)} {
+      width: nth($font-width, $i);
+      height: 29px;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: italic;
+      line-height: 1.21;
+      letter-spacing: 0.72px;
+      text-align: left;
+      color: #979797; 
+    }
+}
