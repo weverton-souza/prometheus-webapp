@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <defs>
+        <style>
+            .cls-1{fill:#33d69f}.cls-2{fill:#fff}.cls-3{filter:url(#Retângulo_90)}
+        </style>
+        <filter id="Retângulo_90" width="70" height="70" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="5"/>
+            <feFlood flood-opacity=".09"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Componente_1_11" data-name="Componente 1 – 11" transform="translate(15 15)">
+        <g class="cls-3" transform="translate(-15 -15)">
+            <rect id="Retângulo_90-2" width="40" height="40" class="cls-1" data-name="Retângulo 90" rx="7" transform="translate(15 15)"/>
+        </g>
+        <path id="Icon_ionic-md-school" d="M5.934 14.8v4.046l6.441 3.866 6.441-3.866V14.8l-6.441 3.866zm6.441-10.3L2.25 10.571l10.125 6.071 8.285-4.966v6.991h1.84v-8.1z" class="cls-2" data-name="Icon ionic-md-school" transform="translate(7.75 6.5)"/>
+    </g>
+</svg>
