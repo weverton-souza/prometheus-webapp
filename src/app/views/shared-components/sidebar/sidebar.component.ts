@@ -9,10 +9,10 @@ declare interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-  {id: '_sendmessage', path: '/send-message', title: 'Enviar Mensagem', icon: 'question_answer', class: ''},
-  {id: '_dashboard', path: '/', title: 'Dashboard', icon: 'dashboard', class: ''},
-  {id: '_tasks', path: '/tasks', title: 'Missões', icon: 'assignment_turned_in', class: ''}
+  {id: '_tutorhome', path: '/tutor/home', title: 'Home', icon: 'home', class: ''},
+  {id: '_tutortasks', path: '/tutor/tasks', title: 'Tasks', icon: 'import_contacts', class: ''},
 ];
+
 declare const $: any;
 
 @Component({
@@ -23,11 +23,18 @@ declare const $: any;
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() {
-    
-  }
+  constructor() { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+  }
+
+  activeSideBar(menuItemId: String) {
+    $(`#${menuItemId}`).addClass('active');
+    ROUTES
+    .filter(route => route.id !== menuItemId)
+    .map(route => {
+      $(`#${route.id}`).removeClass('active')
+    })
   }
 }

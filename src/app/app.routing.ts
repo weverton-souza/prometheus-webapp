@@ -5,7 +5,9 @@ import {Routes, RouterModule} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    children: [{ path: '', loadChildren: 'src/app/views/views.module#ViewsModule' }]
+    children: [
+      { path: 'tutor', loadChildren: 'app/views/tutor/tutor.module#TutorModule' }
+    ]
   },
 ];
 

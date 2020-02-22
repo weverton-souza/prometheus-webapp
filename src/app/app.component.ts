@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
     // this.profileService.register().subscribe(res => {
     //   console.log(res)
     // });
-    this.profileService.signIn().subscribe(res => {
-    });
-    this.store.dispatch(new CreateProfile(new Profile()));
+    // this.profileService.signIn().subscribe(res => {
+    // });
+    // this.store.dispatch(new CreateProfile(new Profile()));
   }
 }
