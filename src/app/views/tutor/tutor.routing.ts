@@ -1,7 +1,14 @@
 import { TutorComponent } from './tutor.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent, TaksComponent } from './pages';
+import {
+  ArchiveComponent,
+  ChatComponent,
+  CalendarComponent,
+  HomeComponent,
+  OthersComponent,
+  TaksComponent,
+} from './pages';
 
 const routes: Routes = [
   {
@@ -9,8 +16,24 @@ const routes: Routes = [
     component: TutorComponent,
     children: [
       {
+        path: 'archive',
+        component: ArchiveComponent
+      },
+      {
+        path: 'calendar',
+        component: CalendarComponent
+      },
+      {
+        path: 'chat',
+        component: ChatComponent
+      },
+      {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'others',
+        component: OthersComponent
       },
       {
         path: 'tasks',

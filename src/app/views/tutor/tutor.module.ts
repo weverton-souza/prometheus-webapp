@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { TutorRoutingModule } from './tutor.routing';
 import { TutorComponent } from './tutor.component';
-import { HomeComponent } from './pages/home/home.component';
-import { TaksComponent } from './pages/taks/taks.component';
-
+import {
+  ArchiveComponent,
+  ChatComponent,
+  HomeComponent,
+  OthersComponent,
+  TaksComponent,
+  CalendarComponent,
+} from './pages';
 
 @NgModule({
-  declarations: [TutorComponent, HomeComponent, TaksComponent],
+  declarations: [
+    ArchiveComponent,
+    CalendarComponent,
+    ChatComponent,
+    HomeComponent,
+    OthersComponent,
+    TaksComponent,
+    TutorComponent,
+  ],
   imports: [
     CommonModule,
-    TutorRoutingModule
+    TutorRoutingModule,
   ]
 })
 export class TutorModule { }

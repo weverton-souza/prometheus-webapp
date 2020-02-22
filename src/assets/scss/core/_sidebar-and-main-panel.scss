@@ -158,11 +158,11 @@
       }
 
       &.active > a {
-        color: $black-color;
+        color: #9E5CB0;
       }
 
       &.active > a i {
-        color: $brand-primary;
+        color: #9E5CB0;
       }
 
       &.active > span {
@@ -170,6 +170,11 @@
         height: 50px;
         float: left;
         background: #9E5CB0;
+      }
+
+      &.active > p {
+        font-weight: 400;
+        color: #9E5CB0;
       }
 
       &.separator {
@@ -191,13 +196,15 @@
     }
 
     p {
+      color:black;
       margin: 0;
       line-height: 30px;
-      font-size: 14px;
+      font-size: 16px;
       position: relative;
       display: block;
       height: auto;
       white-space: nowrap;
+      font-weight: 400;
     }
 
     i {
@@ -214,7 +221,6 @@
 
   .nav li a,
   .nav li .dropdown-menu a {
-    margin: 10px 0 0 0;
     width: 100%;
     color: $black-color;
     padding-left: 10px;
