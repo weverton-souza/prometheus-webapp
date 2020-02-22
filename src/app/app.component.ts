@@ -12,17 +12,14 @@ import {ProfileService} from '@shared/service/profile.service';
 export class AppComponent implements OnInit {
   title = 'Prometheus';
 
-  constructor(private store: Store<IAppState>, private profileService: ProfileService) {
-  }
+  constructor(private store: Store<IAppState>, private profileService: ProfileService) {}
 
   ngOnInit() {
     // this.profileService.register().subscribe(res => {
     //   console.log(res)
     // });
     this.profileService.signIn().subscribe(res => {
-      console.log(res)
     });
     this.store.dispatch(new CreateProfile(new Profile()));
-    console.log(new CreateProfile(new Profile()));
   }
 }

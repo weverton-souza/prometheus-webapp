@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 declare interface RouteInfo {
+  id: String,
   path: string;
   title: string;
   icon: string;
@@ -8,9 +9,9 @@ declare interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-  {path: '/send-message', title: 'Enviar Mensagem', icon: 'question_answer', class: ''},
-  {path: '/', title: 'Dashboard', icon: 'dashboard', class: ''},
-  {path: '/tasks', title: 'Missões', icon: 'assignment_turned_in', class: ''}
+  {id: '_sendmessage', path: '/send-message', title: 'Enviar Mensagem', icon: 'question_answer', class: ''},
+  {id: '_dashboard', path: '/', title: 'Dashboard', icon: 'dashboard', class: ''},
+  {id: '_tasks', path: '/tasks', title: 'Missões', icon: 'assignment_turned_in', class: ''}
 ];
 declare const $: any;
 
@@ -23,10 +24,10 @@ export class SidebarComponent implements OnInit {
   menuItems: any[];
 
   constructor() {
+    
   }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
-
 }

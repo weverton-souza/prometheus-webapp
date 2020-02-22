@@ -7,10 +7,5 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ViewsComponent implements OnInit {
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

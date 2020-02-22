@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './app.routing';
 import {AppComponent} from './app.component';
 import {CoreModule} from '@core/core.module';
 import {SidebarComponent} from '@views/shared-components/sidebar/sidebar.component';

@@ -1,14 +1,19 @@
 <div class="logo">
   <a href="/" class="simple-text">
     <div class="logo-img">
-      <img src="/assets/img/icons/prometheus-favicon.svg"/>
+      <img/>
     </div>
-    Prometheus
   </a>
 </div>
 <div class="sidebar-wrapper">
-  <ul class="nav">
-    <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+  <ul id="ulSideBar" class="nav">
+    <li 
+      id="{{menuItem.id}}"
+      routerLinkActive="active"
+      *ngFor="let menuItem of menuItems"
+      class="{{menuItem.class}} nav-item"
+      (click)="activeSideBar(menuItem.id)">
+      <span class="tag"></span>
       <a class="nav-link" [routerLink]="[menuItem.path]">
         <i class="material-icons">{{menuItem.icon}}</i>
         <p>{{menuItem.title}}</p>

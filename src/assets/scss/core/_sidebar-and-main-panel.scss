@@ -49,6 +49,7 @@
     height: calc(100vh - 75px);
     overflow: auto;
     width: 260px;
+    background: #f5f8fa;
     z-index: 4;
 
     padding-bottom: 30px;
@@ -141,10 +142,6 @@
         }
       }
 
-      &:first-child > a {
-        margin: 0 15px;
-      }
-
       &:hover > a,
       & .dropdown-menu a:hover,
       & .dropdown-menu a:focus,
@@ -160,9 +157,19 @@
         }
       }
 
-      &.active > a,
+      &.active > a {
+        color: $black-color;
+      }
+
       &.active > a i {
-        color: $white-color;
+        color: $brand-primary;
+      }
+
+      &.active > span {
+        width: 3%;
+        height: 50px;
+        float: left;
+        background: #9E5CB0;
       }
 
       &.separator {
@@ -195,6 +202,7 @@
 
     i {
       font-size: 24px;
+      margin-left: 20px;
       float: left;
       margin-right: 15px;
       line-height: 30px;
@@ -206,8 +214,8 @@
 
   .nav li a,
   .nav li .dropdown-menu a {
-    margin: 10px 15px 0;
-    border-radius: $border-radius-base;
+    margin: 10px 0 0 0;
+    width: 100%;
     color: $black-color;
     padding-left: 10px;
     padding-right: 10px;
@@ -242,6 +250,7 @@
 
   .logo {
     padding: 15px 0px;
+    background: #f5f8fa;
     margin: 0;
     display: block;
     position: relative;
@@ -321,7 +330,7 @@
   }
 
   &[data-color="danger"] {
-    @include set-background-color-button($brand-primary);
+    @include set-background-color-button($white-color);
   }
 
   &[data-color="rose"] {
