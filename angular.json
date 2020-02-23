@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "catech",
+      "prefix": "caltech",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

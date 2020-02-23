@@ -7,7 +7,7 @@ import {
   CalendarComponent,
   HomeComponent,
   OthersComponent,
-  TaksComponent,
+  TasksComponent,
 } from './pages';
 
 const routes: Routes = [
@@ -37,7 +37,7 @@ const routes: Routes = [
       },
       {
         path: 'tasks',
-        component: TaksComponent
+        component: TasksComponent
       }
     ]
 

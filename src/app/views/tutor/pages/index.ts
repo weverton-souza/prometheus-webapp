@@ -3,4 +3,4 @@ export { CalendarComponent } from './calendar/calendar.component';
 export { ChatComponent } from './chat/chat.component';
 export { HomeComponent } from './home/home.component';
 export { OthersComponent } from './others/others.component';
-export { TaksComponent } from './taks/taks.component';
+export { TasksComponent } from './tasks/tasks.component';

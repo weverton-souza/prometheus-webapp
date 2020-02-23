@@ -1,3 +1,4 @@
+import { SharedComponentsModule } from './../shared-components/shared-components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TutorRoutingModule } from './tutor.routing';
@@ -7,9 +8,10 @@ import {
   ChatComponent,
   HomeComponent,
   OthersComponent,
-  TaksComponent,
+  TasksComponent,
   CalendarComponent,
 } from './pages';
+import { VerticalPanelComponent } from '@views/shared-components';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import {
     ChatComponent,
     HomeComponent,
     OthersComponent,
-    TaksComponent,
+    TasksComponent,
     TutorComponent,
+    VerticalPanelComponent
   ],
   imports: [
     CommonModule,
