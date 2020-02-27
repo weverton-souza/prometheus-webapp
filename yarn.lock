@@ -4865,6 +4865,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+mathjax@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.0.1.tgz#cb8f7a1342557e2b03fef0c13e43785dfeb00b9b"
+  integrity sha512-hrwOeKm3b1X4zpvLRSX89y3MZLRJTq0bSGIbo5M6BANOeGlL2z8Y8mZaKRFJ/WY4qcIrHp3f+Q9RWIaldOCUVg==
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -5149,6 +5154,13 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ngx-mathjax@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/ngx-mathjax/-/ngx-mathjax-0.0.8.tgz#6fada5b2c3350614d89757afab594c21179555ec"
+  integrity sha512-lbK8D2i1PjzPxdFowOPH7PXq8g9Ge0AWdqO8X+fowN255P7cpNOnRexlRh+zXZEK/S/zYRQBmGtUx8SArGfNDA==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

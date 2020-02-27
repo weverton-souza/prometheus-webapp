@@ -13,14 +13,16 @@ import {environment} from '@environments/environment';
 import {MAT_DATE_LOCALE} from '@angular/material';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from "@shared/service/in-memory-data.service";
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     EntityDataModule.forRoot(entityConfig),
     StoreModule.forRoot([]),
     EffectsModule.forRoot([]),
@@ -32,8 +34,10 @@ import {InMemoryDataService} from "@shared/service/in-memory-data.service";
   exports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     StoreModule,
     EffectsModule,
     StoreDevtoolsModule,

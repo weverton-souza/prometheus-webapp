@@ -7,8 +7,9 @@ import {
   CalendarComponent,
   HomeComponent,
   OthersComponent,
-  TasksComponent,
+  TasksComponent
 } from './pages';
+import { QuizComponent } from '@views/shared-components/tasks/quiz/quiz.component';
 
 const routes: Routes = [
   {
@@ -36,8 +37,17 @@ const routes: Routes = [
         component: OthersComponent
       },
       {
-        path: 'tasks',
-        component: TasksComponent
+        path: 'tasks/types',
+        children: [
+          {
+            path: '',
+            component: TasksComponent
+          },
+          {
+            path: 'quiz',
+            component: QuizComponent
+          }
+        ]
       }
     ]
 

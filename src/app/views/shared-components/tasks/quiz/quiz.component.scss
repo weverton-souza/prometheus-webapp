@@ -1,0 +1,54 @@
+::ng-deep { 
+    .mat-step-header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        border-bottom: 1px solid #E1E6EB;
+        text-align:center;
+        float:left;
+        color:#B3B7C1;
+    }
+
+    .mat-stepper-horizontal-line {
+        border: none !important;
+    }
+
+    .mat-horizontal-stepper-header .mat-step-icon {
+        margin-right: 35% !important;
+        margin-left: 35%;
+    }
+
+    .mat-step-header .mat-step-label {
+        margin-right: 10% !important;
+        margin-left: 10%;
+    }
+
+    .mat-step-icon {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    .mat-horizontal-content-container {
+        overflow: hidden;
+        padding: 2em !important;
+    }
+
+    .mat-form-field {
+        width: 20%;
+    }
+
+    .mat-form-field + .mat-form-field {
+        margin-left: 8px;
+    }
+
+    .form-container {
+        display: flex !important;
+    }
+}
+
+.mat-step-header-active {
+    border-bottom: 2px solid #00ABC9;
+}
+
+  

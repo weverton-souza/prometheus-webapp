@@ -1,1 +1,33 @@
-<p>quiz works!</p>
+<mat-horizontal-stepper [linear]="true" #stepper>
+  
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Adicionar exercício</ng-template>
+
+      <div class="form-container">
+        <mat-form-field>
+          <mat-label>Tipo da questão</mat-label>
+          <mat-select>
+            <mat-option 
+              *ngFor="let questionType of questionTypes" 
+              [value]="questionType.value">
+              {{questionType.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Questão</mat-label>
+          <textarea matInput
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="5" mathjax>
+                  </textarea>
+        </mat-form-field>
+      </div>
+    </form>
+    <span class="mat-step-header-active"></span>
+  </mat-step>
+
+</mat-horizontal-stepper>

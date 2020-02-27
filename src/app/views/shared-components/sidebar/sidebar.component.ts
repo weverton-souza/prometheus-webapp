@@ -11,7 +11,7 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   {id: '_tutorhome', path: '/tutor/home', title: 'Home', icon: 'home', class: ''},
   {id: '_calendar', path: '/tutor/calendar', title: 'Calendário', icon: 'calendar_today', class: ''},
-  {id: '_tutortasks', path: '/tutor/tasks', title: 'Atividades', icon: 'folder_open', class: ''},
+  {id: '_tutortasks', path: '/tutor/tasks/types', title: 'Atividades', icon: 'folder_open', class: ''},
   {id: '_archive', path: '/tutor/archive', title: 'Arquivos', icon: 'attach_file', class: ''},
   {id: '_chat', path: '/tutor/chat', title: 'Chat', icon: 'chat', class: ''},
   {id: '_others', path: '/tutor/others', title: 'Outros', icon: 'apps', class: ''},

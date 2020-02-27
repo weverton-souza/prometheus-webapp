@@ -1,0 +1,38 @@
+@import "~@angular/material/theming";
+
+.cards-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-style {
+  cursor: pointer;
+  max-width: 25;
+  margin-right: 2em;
+  padding: 16px 16px 0px 16px;
+  box-shadow: 0 12px 44px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-style:nth-child(2n) {
+  margin-right: 0;
+}
+
+.card-style:nth-child(2n + 1) {
+  margin-left: 0;
+}
+
+img {
+  max-height: 248px;
+  max-width: 248px;
+  min-height: 248px;
+  min-width: 248px;
+  border-top: 1px solid rgb(181, 187, 194);
+}
+
+.card-header-image {
+  background-size: cover;
+}
+
+.card-with-shadow {
+  @include mat-elevation(5, #000000, 0.9);
+}

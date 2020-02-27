@@ -1,3 +1,4 @@
+import { ActivitiesComponent } from './pages/activities/activities.component';
 import { SharedComponentsModule } from './../shared-components/shared-components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,7 @@ import {
   TasksComponent,
   CalendarComponent,
 } from './pages';
-import { VerticalPanelComponent } from '@views/shared-components';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { VerticalPanelComponent } from '@views/shared-components';
     ChatComponent,
     HomeComponent,
     OthersComponent,
+    ActivitiesComponent,
     TasksComponent,
-    TutorComponent,
-    VerticalPanelComponent
+    TutorComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     TutorRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class TutorModule { }

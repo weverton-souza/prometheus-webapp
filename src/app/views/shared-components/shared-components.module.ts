@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { VerticalPanelComponent } from './vertical-panel/vertical-panel.component';
+import { PanelTitleComponent } from './panel-title/panel-title.component';
+import { PanelBodyComponent } from './panel-body/panel-body.component';
+import { SharedModule } from '@shared/shared.module';
+import { QuizComponent } from './tasks/quiz/quiz.component';
 
 @NgModule({
-  declarations: [VerticalPanelComponent],
+  declarations: [VerticalPanelComponent, PanelTitleComponent, PanelBodyComponent, QuizComponent],
   imports: [
-    CommonModule
+    SharedModule,
   ],
   exports: [
-    VerticalPanelComponent
+    VerticalPanelComponent,
+    PanelTitleComponent,
+    PanelBodyComponent,
+    QuizComponent
   ]
 })
 export class SharedComponentsModule { }
