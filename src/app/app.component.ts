@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Profile} from '@shared/model';
 import {CreateProfile, IAppState} from '@shared/app-state/profile/profile.actions';
 import {Store} from '@ngrx/store';
-import {ProfileService} from '@shared/service/profile.service';
+import {ProfileService} from '@shared/services/profile.service';
 
 @Component({
   selector: 'app-root',

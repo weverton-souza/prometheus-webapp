@@ -1,5 +1,5 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
-  
+
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Adicionar exercício</ng-template>
@@ -8,7 +8,7 @@
         <mat-form-field>
           <mat-label>Tipo da questão</mat-label>
           <mat-select>
-            <mat-option 
+            <mat-option
               *ngFor="let questionType of questionTypes" 
               [value]="questionType.value">
               {{questionType.viewValue}}
@@ -16,18 +16,100 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Questão</mat-label>
+        <mat-form-field style="width: 55em;">
+          <mat-label>Título</mat-label>
+          <input autocomplete="off" matInput placeholder="Ex. Exercício de história do Brasil">
+        </mat-form-field>
+
+        <mat-form-field style="width: 100%;">
+          <mat-label>Pergunta</mat-label>
           <textarea matInput
                     cdkTextareaAutosize
                     #autosize="cdkTextareaAutosize"
-                    cdkAutosizeMinRows="5"
-                    cdkAutosizeMaxRows="5" mathjax>
-                  </textarea>
+                    cdkAutosizeMinRows="3"
+                    cdkAutosizeMaxRows="5"></textarea>
         </mat-form-field>
       </div>
     </form>
     <span class="mat-step-header-active"></span>
+
+    <mat-divider style="margin-bottom: 1em"></mat-divider>
+
+    <div class="container text-center">
+ 
+      <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element;let index = index">
+            <editable (update)="updateField(index, 'name')">
+              <ng-template viewMode>
+                {{element.name}}
+              </ng-template>
+              <ng-template editMode>
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="getControl(index, 'name')">
+          <mat-error *ngIf="getControl(index, 'name').hasError('required')">
+             Field is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+                <!-- <input  [formControl]="getControl(index, 'name')" focusable caltechEditableOnEnter> -->
+              </ng-template>
+            </editable> 
+          </td>
+        
+          
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Weight </th>
+          <td mat-cell *matCellDef="let element;let index = index">
+              <editable (update)="updateField(index, 'weight')">
+              <ng-template viewMode>
+                {{element.weight}}
+              </ng-template>
+              <ng-template editMode>
+                <input  [formControl]="getControl(index, 'weight')" focusable caltechEditableOnEnter>
+              </ng-template>
+            </editable> 
+          </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element;let index = index"> 
+              <editable (update)="updateField(index, 'symbol')">
+              <ng-template viewMode>
+              {{element.symbol}}
+              </ng-template>
+              <ng-template editMode>
+                <input  [formControl]="getControl(index, 'symbol')" focusable caltechEditableOnEnter>
+              </ng-template>
+            </editable> 
+             </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+     
+    </div>
+
+    <div class="button-quiz">
+      <button style="width: 10%;  margin-right: 0.5em;" mat-stroked-button color="primary">Salvar</button>
+      <button style="width: 10%;" mat-stroked-button color="warn">Cancelar</button>
+    </div>
   </mat-step>
 
 </mat-horizontal-stepper>

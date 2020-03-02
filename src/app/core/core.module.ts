@@ -12,7 +12,7 @@ import {entityConfig} from '../entity-metadata';
 import {environment} from '@environments/environment';
 import {MAT_DATE_LOCALE} from '@angular/material';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemoryDataService} from "@shared/service/in-memory-data.service";
+import {InMemoryDataService} from "@shared/services/in-memory-data.service";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({

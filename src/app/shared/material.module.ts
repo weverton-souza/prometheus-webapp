@@ -29,12 +29,14 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatStepperModule,
+  MatButtonModule,
 } from '@angular/material';
 
 @NgModule({
   exports: [
     MatAutocompleteModule,
     MatButtonToggleModule,
+    MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,

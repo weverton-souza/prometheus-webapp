@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
-import {ProfileService} from '@shared/service/profile.service';
+import {ProfileService} from '@shared/services/profile.service';
 import {Observable, of} from 'rxjs';
 import {Action} from '@ngrx/store';
 import {Profile} from '@shared/model';
