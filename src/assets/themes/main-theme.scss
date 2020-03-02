@@ -1,0 +1,77 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$caltech-primary-color: (
+    50 : #efeefb,
+    100 : #d6d4f4,
+    200 : #bbb7ed,
+    300 : #9f9ae6,
+    400 : #8b85e0,
+    500 : #766fdb,
+    600 : #6e67d7,
+    700 : #635cd2,
+    800 : #5952cd,
+    900 : #4640c4,
+    A100 : #ffffff,
+    A200 : #e3e2ff,
+    A400 : #b3afff,
+    A700 : #9a96ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$caltech-secondary-color: (
+    50 : #eafaf4,
+    100 : #c9f3e3,
+    200 : #a6ebd0,
+    300 : #82e2bd,
+    400 : #67dcae,
+    500 : #4cd6a0,
+    600 : #45d198,
+    700 : #3ccc8e,
+    800 : #33c684,
+    900 : #24bc73,
+    A100 : #f7fffb,
+    A200 : #c4ffe1,
+    A400 : #91ffc8,
+    A700 : #78ffbb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$primary: mat-palette($caltech-primary-color);
+$accent: mat-palette($caltech-secondary-color, 900);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
